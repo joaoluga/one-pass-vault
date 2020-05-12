@@ -34,11 +34,11 @@ O processo de execução desse comando acontece da seguinte forma:
     5. Executar o `cmd`. No caso do exemplo é o `docker-compose up -d`.
  
 As variáveis ambiente lançadas durante esse execução serão:
-* app_cred_1_user=<valor1>
-* app_cred_2_password=<valor2>
-* db_cred_1_host=<valor3>
-* db_cred_2_port=<valor4>
+* app_cred_1_user=valor1
+* app_cred_2_password=valor2
+* db_cred_1_host=valor3
+* db_cred_2_port=valor4
 * etc
 
-Dentro do OnePassword, um `item` pode ter vários *tipos*, sendo eles *dados de acesso, banco de dados, servidor, conta de email*, etc. Por hora, o Parser de Item (OnePassItemParser) implementa somente `dados de acesso` (ApplicationItem) e `banco de dados` (DatabaseItem). Cada uma dessas classes terão campos específicos que serão pesquisados dentro da *response* para gerar um novo *dicionário* que vai ser importante para criar as variáveis ambiente. O formato padrão das variáveis ambientes sempre vai ser: `<nome_da_credencial>_<campo_da_credencial>=<valor>`.
+Dentro do OnePassword, um `item` pode ter vários *tipos*, sendo eles *dados de acesso, banco de dados, servidor, conta de email*, etc. Por hora, o Parser de Item (**OnePassItemParser**) implementa somente `dados de acesso` (**ApplicationItem**) e `banco de dados` (**DatabaseItem**). Cada uma dessas classes terão campos específicos que serão pesquisados dentro da *response* para gerar um novo *dicionário* que vai ser importante para criar as variáveis ambiente. O formato padrão das variáveis ambientes sempre vai ser: `<nome_da_credencial>_<campo_da_credencial>=<valor>`.
  
